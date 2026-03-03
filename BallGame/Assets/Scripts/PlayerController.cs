@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text winText;
     public GameObject Gate;
-    public Rigidbody rb;
+    public GameObject Gate2;
+    private Rigidbody rb;
     public int Score;
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,10 @@ public class PlayerController : MonoBehaviour
             if (Score >= 5)
             {
                 Gate.gameObject.SetActive(false);
+            }
+            if (Score >= 9)
+            {
+                Gate2.gameObject.SetActive(false);
             }
         }
         if (other.gameObject.CompareTag("danger"))
